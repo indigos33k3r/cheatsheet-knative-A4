@@ -15,7 +15,7 @@ Printable version on A4 page: [cheatsheet-knative-A4.pdf](cheatsheet-knative-A4.
 
 See more CheatSheets from Denny: [here](https://github.com/topics/denny-cheatsheets)
 
-<img align="right" width="500" height="400" src="https://github.com/dennyzhang/cheatsheet-knative-A4/blob/master/images/object_model.png" />
+<img align="left" width="500" height="400" src="https://github.com/dennyzhang/cheatsheet-knative-A4/blob/master/images/object_model.png" />
 
 - Query status
 
