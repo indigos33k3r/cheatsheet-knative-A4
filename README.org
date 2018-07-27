@@ -177,6 +177,11 @@ https://github.com/knative/docs/blob/master/install/Knative-with-Minikube.md#ins
 
 https://github.com/knative/docs/blob/master/install/Knative-with-Minikube.md#installing-knative-serving
 ** #  --8<-------------------------- separator ------------------------>8-- :noexport:
+** TODO Why we need to label the default namespace? 
+https://github.com/knative/docs/blob/master/install/Knative-with-GKE.md
+#+BEGIN_EXAMPLE
+kubectl label namespace default istio-injection=enabled
+#+END_EXAMPLE
 ** TODO app stucks in PodInitializing for quite a while
 helloworld-go3-00001-autoscaler-69487d9986-bwcqs
 
@@ -200,10 +205,12 @@ Hello World: Go Sample v4!
 ** TODO Hard to Trouble: When it's not working, no idea how to debug
 ** TODO After recreating app, the domain field will disappear
 ** TODO [#A] How to avoid build docker image manually: source-to-container
-** How many CRD knative uses, and what we can learn from them?
-- route
-- gateway
-- revisions
+** TODO Try more serving functions and examples
+https://github.com/knative/docs/tree/master/serving/samples
+** TODO Example: use lambda to get logs: https://github.com/knative/docs/tree/master/serving/samples/telemetry-go
+** TODO How many CRD knative uses, and what we can learn from them?
+- route, revisions, configurations, gateway
+** #  --8<-------------------------- separator ------------------------>8-- :noexport:
 ** More Resources
 https://github.com/knative/docs/blob/master/install/README.md
 

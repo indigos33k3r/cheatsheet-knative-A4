@@ -22,6 +22,8 @@ See more CheatSheets from Denny: [here](https://github.com/topics/denny-cheatshe
 | List configurations         | `kubectl get configurations`                                                                                      |
 | List all revisions          | `kubectl get revisions`                                                                                           |
 | List all functions          | `kubectl get route`                                                                                               |
+| List all gateways           | `kubectl get gateway --all-namespaces`                                                                            |
+| List all related pods       | `watch "kubectl get pods -n istio-system; echo "\n"; kubectl get pods -n knative-serving"`                        |
 | Get function domain name    | `kubectl get services.serving.knative.dev $conf_name -o=custom-columns=NAME:.metadata.name,DOMAIN:.status.domain` |
 | Get ingress gateway service | `kubectl get svc knative-ingressgateway -n istio-system`                                                          |
 
