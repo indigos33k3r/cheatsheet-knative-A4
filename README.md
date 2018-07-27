@@ -13,9 +13,10 @@ Printable version on A4 page: [cheatsheet-knative-A4.pdf](cheatsheet-knative-A4.
 
 <a href="https://www.dennyzhang.com"><img align="right" width="185" height="37" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
 
+<img align="left" width="500" height="400" src="https://github.com/dennyzhang/cheatsheet-knative-A4/blob/master/images/object_model.png" />
+
 See more CheatSheets from Denny: [here](https://github.com/topics/denny-cheatsheets)
 
-<img align="left" width="500" height="400" src="https://github.com/dennyzhang/cheatsheet-knative-A4/blob/master/images/object_model.png" />
 
 - Query status
 
