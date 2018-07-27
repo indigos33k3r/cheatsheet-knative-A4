@@ -17,11 +17,24 @@
 ** basic use
 - Knative requires a Kubernetes cluster v1.10 or newer. kubectl v1.10 is also required.
 
+#+BEGIN_EXAMPLE
 The following Knative components are currently available:
 
 - Build - Source-to-container build orchestration
 - Eventing - Management and delivery of events
 - Serving - Request-driven compute that can scale to zero
+#+END_EXAMPLE
+
+https://github.com/knative/docs/tree/master/serving
+#+BEGIN_EXAMPLE
+
+Knative Serving defines a set of objects as Kubernetes Custom Resource Definitions (CRDs). These objects are used to define and control how your serverless workload behaves on the cluster:
+
+- Service: The service.serving.knative.dev resource automatically manages the whole lifecycle of your workload. It controls the creation of other objects to ensure that your app has a route, a configuration, and a new revision for each update of the service. Service can be defined to always route traffic to the latest revision or to a pinned revision.
+- Route: The route.serving.knative.dev resource maps a network endpoint to a one or more revisions. You can manage the traffic in several ways, including fractional traffic and named routes.
+- Configuration: The configuration.serving.knative.dev resource maintains the desired state for your deployment. It provides a clean separation between code and configuration and follows the Twelve-Factor App methodology. Modifying a configuration creates a new revision.
+- Revision: The revision.serving.knative.dev resource is a point-in-time snapshot of the code and configuration for each modification made to the workload. Revisions are immutable objects and can be retained for as long as useful.
+#+END_EXAMPLE
 ** Benefits
 Benefits from severless:
 - Cost saving: Infra will be shutdown if no requests
@@ -177,6 +190,13 @@ https://github.com/knative/docs/blob/master/install/Knative-with-Minikube.md#ins
 
 https://github.com/knative/docs/blob/master/install/Knative-with-Minikube.md#installing-knative-serving
 ** #  --8<-------------------------- separator ------------------------>8-- :noexport:
+** TODO How Knative build works?
+https://github.com/knative/build
+** TODO [#A] How to avoid build docker image manually: source-to-container :IMPORTANT:
+** TODO Example: use lambda to get logs: https://github.com/knative/docs/tree/master/serving/samples/telemetry-go
+** TODO [#A] How many CRD knative uses, and what we can learn from them? :IMPORTANT:
+- route, revisions, configurations, gateway
+** #  --8<-------------------------- separator ------------------------>8-- :noexport:
 ** TODO Why we need to label the default namespace? 
 https://github.com/knative/docs/blob/master/install/Knative-with-GKE.md
 #+BEGIN_EXAMPLE
@@ -204,12 +224,8 @@ Hello World: Go Sample v4!
  #+END_EXAMPLE
 ** TODO Hard to Trouble: When it's not working, no idea how to debug
 ** TODO After recreating app, the domain field will disappear
-** TODO [#A] How to avoid build docker image manually: source-to-container
 ** TODO Try more serving functions and examples
 https://github.com/knative/docs/tree/master/serving/samples
-** TODO Example: use lambda to get logs: https://github.com/knative/docs/tree/master/serving/samples/telemetry-go
-** TODO How many CRD knative uses, and what we can learn from them?
-- route, revisions, configurations, gateway
 ** #  --8<-------------------------- separator ------------------------>8-- :noexport:
 ** More Resources
 https://github.com/knative/docs/blob/master/install/README.md

@@ -27,6 +27,8 @@ See more CheatSheets from Denny: [here](https://github.com/topics/denny-cheatshe
 | Get function domain name    | `kubectl get services.serving.knative.dev $conf_name -o=custom-columns=NAME:.metadata.name,DOMAIN:.status.domain` |
 | Get ingress gateway service | `kubectl get svc knative-ingressgateway -n istio-system`                                                          |
 
+<img align="right" width="500" height="400" src="https://github.com/dennyzhang/cheatsheet-knative-A4/blob/master/images/object_model.png" />
+
 <a href="https://www.dennyzhang.com"><img align="right" width="201" height="268" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/denny_201706.png"></a>
 
 <a href="https://www.dennyzhang.com"><img align="right" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
