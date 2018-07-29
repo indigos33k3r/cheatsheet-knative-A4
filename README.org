@@ -6,14 +6,37 @@
 #+ARCHIVE: %s_done::** Finished Tasks
 #+AUTHOR: dennyzhang.com (denny@dennyzhang.com)
 #+OPTIONS: toc:2 \n:t ^:nil creator:nil d:nil
-* Deploy knative on minikube
-** SNS link
+* CheatSheet
 #+BEGIN_HTML
 <a href="https://www.linkedin.com/in/dennyzhang001"><img src="https://www.dennyzhang.com/wp-content/uploads/sns/linkedin.png" alt="linkedin" /></a>
 <a href="https://github.com/DennyZhang"><img src="https://www.dennyzhang.com/wp-content/uploads/sns/github.png" alt="github" /></a>
 <a href="https://www.dennyzhang.com/slack" target="_blank" rel="nofollow"><img src="http://slack.dennyzhang.com/badge.svg" alt="slack"/></a>
 <a href="https://github.com/DennyZhang"><img align="right" width="200" height="183" src="https://www.dennyzhang.com/wp-content/uploads/denny/watermark/github.png" /></a>
 #+END_HTML
+
+See more CheatSheets from Denny: [[https://github.com/topics/denny-cheatsheets][here]]
+
+- Query status
+
+| Name                        | Command                                                                                                           |
+|-----------------------------+-------------------------------------------------------------------------------------------------------------------|
+| List configurations         | `kubectl get configurations`                                                                                      |
+| List all revisions          | `kubectl get revisions`                                                                                           |
+| List all functions          | `kubectl get route`                                                                                               |
+| List all gateways           | `kubectl get gateway --all-namespaces`                                                                            |
+| List all related pods       | `watch "kubectl get pods -n istio-system; echo "\n"; kubectl get pods -n knative-serving"`                        |
+| Get function domain name    | `kubectl get services.serving.knative.dev $conf_name -o=custom-columns=NAME:.metadata.name,DOMAIN:.status.domain` |
+| Get ingress gateway service | `kubectl get svc knative-ingressgateway -n istio-system`                                                          |
+
+** More Resources
+https://github.com/knative/docs/blob/master/install/README.md
+
+#+BEGIN_HTML
+<a href="https://www.dennyzhang.com"><img align="right" width="201" height="268" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/denny_201706.png"></a>
+
+<a href="https://www.dennyzhang.com"><img align="right" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
+#+END_HTML
+* Deploy knative on minikube
 ** basic use
 - Knative requires a Kubernetes cluster v1.10 or newer. kubectl v1.10 is also required.
 
@@ -231,11 +254,3 @@ Hello World: Go Sample v4!
 https://github.com/knative/docs/tree/master/serving/samples
 ** TODO How to scale knative pod instances
 ** #  --8<-------------------------- separator ------------------------>8-- :noexport:
-** More Resources
-https://github.com/knative/docs/blob/master/install/README.md
-
-#+BEGIN_HTML
-<a href="https://www.dennyzhang.com"><img align="right" width="201" height="268" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/denny_201706.png"></a>
-
-<a href="https://www.dennyzhang.com"><img align="right" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
-#+END_HTML
