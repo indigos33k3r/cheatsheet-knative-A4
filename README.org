@@ -170,7 +170,6 @@ curl -I -H "Host: helloworld-go.default.example.com" http://10.0.2.15:32380
 * Interesting Observations With Knative local test
 ** DONE [#A] get pods stucks in ContainerCreating state: takes more than 15 minutes (Nowhere to check what is going on)
    CLOSED: [2018-07-25 Wed 23:35]
-** TODO How I can customize how many pods to server my given function? (Not all functions are equally important)
 ** DONE [#A] Since pod will be created on-demand, the first request of warm-up takes 11 seconds (It's too slow for real usage)
    CLOSED: [2018-07-27 Fri 09:38]
 #+BEGIN_EXAMPLE
@@ -181,6 +180,7 @@ real	0m11.426s
 user	0m0.003s
 sys	0m0.001s
 #+END_EXAMPLE
+** TODO How I can customize how many pods to serve my given function? (Not all functions are equally important)
 ** DONE minikube start: is super slow: more than 10 minutes to deploy
    CLOSED: [2018-07-25 Wed 23:36]
 ** DONE knative serving deployment takes more than 5 minutes
