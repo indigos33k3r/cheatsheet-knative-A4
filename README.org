@@ -167,35 +167,38 @@ https://github.com/knative/docs/blob/master/install/getting-started-knative-app.
 curl -I -H "Host: helloworld-go.default.example.com" http://10.0.2.15:32380
  #+END_EXAMPLE
 
-** Key Observations
-*** DONE minikube start: is super slow: more than 10 minutes
-    CLOSED: [2018-07-25 Wed 23:36]
-*** DONE get pods stucks in ContainerCreating state: takes more than 15 minutes
-    CLOSED: [2018-07-25 Wed 23:35]
-*** DONE knative serving deployment takes more than 5 minutes
-    CLOSED: [2018-07-25 Wed 23:35]
-*** DONE warm-up takes 11 seconds
-    CLOSED: [2018-07-27 Fri 09:38]
- #+BEGIN_EXAMPLE
- $ time  curl  -H "Host: helloworld-go4.default.example.com" http://${IP_ADDRESS}
- Hello World: Go Sample v4!
+* Interesting Observations With Knative local test
+** DONE [#A] get pods stucks in ContainerCreating state: takes more than 15 minutes (Nowhere to check what is going on)
+   CLOSED: [2018-07-25 Wed 23:35]
+** TODO How I can customize how many pods to server my given function? (Not all functions are equally important)
+** DONE [#A] Since pod will be created on-demand, the first request of warm-up takes 11 seconds (It's too slow for real usage)
+   CLOSED: [2018-07-27 Fri 09:38]
+#+BEGIN_EXAMPLE
+$ time  curl  -H "Host: helloworld-go4.default.example.com" http://${IP_ADDRESS}
+Hello World: Go Sample v4!
 
- real	0m11.426s
- user	0m0.003s
- sys	0m0.001s
- #+END_EXAMPLE
-*** DONE Istio yaml and Knative Serving yaml files are 3K-16.7K lines
-    CLOSED: [2018-07-27 Fri 09:54]
+real	0m11.426s
+user	0m0.003s
+sys	0m0.001s
+#+END_EXAMPLE
+** DONE minikube start: is super slow: more than 10 minutes to deploy
+   CLOSED: [2018-07-25 Wed 23:36]
+** DONE knative serving deployment takes more than 5 minutes
+   CLOSED: [2018-07-25 Wed 23:35]
+** DONE Istio yaml and Knative Serving yaml files are super long: 3K-16.7K lines
+   CLOSED: [2018-07-27 Fri 09:54]
 https://github.com/knative/docs/blob/master/install/Knative-with-Minikube.md#installing-istio
 
 https://github.com/knative/docs/blob/master/install/Knative-with-Minikube.md#installing-knative-serving
 ** #  --8<-------------------------- separator ------------------------>8-- :noexport:
 ** TODO How Knative build works?
 https://github.com/knative/build
+https://medium.com/@pczarkowski/introduction-to-knative-b93a0b9aeeef
 ** TODO [#A] How to avoid build docker image manually: source-to-container :IMPORTANT:
 ** TODO Example: use lambda to get logs: https://github.com/knative/docs/tree/master/serving/samples/telemetry-go
 ** TODO [#A] How many CRD knative uses, and what we can learn from them? :IMPORTANT:
 - route, revisions, configurations, gateway
+** TODO How knative run CRD controller in HA way
 ** #  --8<-------------------------- separator ------------------------>8-- :noexport:
 ** TODO Why we need to label the default namespace? 
 https://github.com/knative/docs/blob/master/install/Knative-with-GKE.md
@@ -226,6 +229,7 @@ Hello World: Go Sample v4!
 ** TODO After recreating app, the domain field will disappear
 ** TODO Try more serving functions and examples
 https://github.com/knative/docs/tree/master/serving/samples
+** TODO How to scale knative pod instances
 ** #  --8<-------------------------- separator ------------------------>8-- :noexport:
 ** More Resources
 https://github.com/knative/docs/blob/master/install/README.md
