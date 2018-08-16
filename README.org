@@ -1,12 +1,15 @@
 * Knative CheatSheet                                                     :Kubernetes:
 :PROPERTIES:
-:type:     knative
+:type:     kubernetes
 :END:
+
+Blog URL: https://cheatsheet.dennyzhang.com/cheatsheet-knative, Category: [[https://cheatsheet.dennyzhang.com/category/kubernetes/][kubernetes]]
+
 #+BEGIN_HTML
 <a href="https://www.linkedin.com/in/dennyzhang001"><img src="https://www.dennyzhang.com/wp-content/uploads/sns/linkedin.png" alt="linkedin" /></a>
 <a href="https://github.com/DennyZhang"><img src="https://www.dennyzhang.com/wp-content/uploads/sns/github.png" alt="github" /></a>
 <a href="https://www.dennyzhang.com/slack" target="_blank" rel="nofollow"><img src="https://slack.dennyzhang.com/badge.svg" alt="slack"/></a>
-<a href="https://github.com/DennyZhang"><img align="right" width="200" height="183" src="https://www.dennyzhang.com/wp-content/uploads/denny/watermark/github.png" /></a>
+<a href="https://github.com/DennyZhang/cheatsheet-knative-A4"><img align="right" width="200" height="183" src="https://www.dennyzhang.com/wp-content/uploads/denny/watermark/github.png" /></a>
 
 <br/><br/>
 
@@ -58,7 +61,7 @@ License: Code is licensed under [[https://www.dennyzhang.com/wp-content/mit_lice
 <a href="https://github.com/DennyZhang"><img align="bottom"src="https://www.dennyzhang.com/wp-content/uploads/sns/github.png" alt="github" /></a>
 <a href="https://www.dennyzhang.com/slack" target="_blank" rel="nofollow"><img align="bottom" src="https://slack.dennyzhang.com/badge.svg" alt="slack"/></a>
 #+END_HTML
-* Deploy knative on minikube
+* Deploy knative on minikube                                       :noexport:
 ** basic use
 - Knative requires a Kubernetes cluster v1.10 or newer. kubectl v1.10 is also required.
 
