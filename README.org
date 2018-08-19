@@ -37,7 +37,7 @@ See more kubernetes from Denny: [[https://github.com/topics/denny-kubernetes][#d
 - event-based integration
 - large scale streaming data
 ** CRD Knative event has created                                   :noexport:
- https://github.com/knative/eventing/tree/master/config
+ https://github.com/knative/eventing/tree/master/cheatsheet-knative-A4][challenges-leetcode-interesting]]
  | CRD Name           | Summary |
  |--------------------+---------|
  | bus                |         |
@@ -73,7 +73,7 @@ The following Knative components are currently available:
 - Serving - Request-driven compute that can scale to zero
 #+END_EXAMPLE
 
-https://github.com/knative/docs/tree/master/serving
+https://github.com/knative/docs/tree/master/cheatsheet-knative-A4][challenges-leetcode-interesting]]
 #+BEGIN_EXAMPLE
 
 Knative Serving defines a set of objects as Kubernetes Custom Resource Definitions (CRDs). These objects are used to define and control how your serverless workload behaves on the cluster:
@@ -243,7 +243,7 @@ https://github.com/knative/docs/blob/master/install/Knative-with-Minikube.md#ins
 https://github.com/knative/build
 https://medium.com/@pczarkowski/introduction-to-knative-b93a0b9aeeef
 ** TODO [#A] How to avoid build docker image manually: source-to-container :IMPORTANT:
-** TODO Example: use lambda to get logs: https://github.com/knative/docs/tree/master/serving/samples/telemetry-go
+** TODO Example: use lambda to get logs: https://github.com/knative/docs/tree/master/cheatsheet-knative-A4][challenges-leetcode-interesting]]
 ** TODO [#A] How many CRD knative uses, and what we can learn from them? :IMPORTANT:
 - route, revisions, configurations, gateway
 ** TODO How knative run CRD controller in HA way
@@ -276,7 +276,7 @@ Hello World: Go Sample v4!
 ** TODO Hard to Trouble: When it's not working, no idea how to debug
 ** TODO After recreating app, the domain field will disappear
 ** TODO Try more serving functions and examples
-https://github.com/knative/docs/tree/master/serving/samples
+https://github.com/knative/docs/tree/master/cheatsheet-knative-A4][challenges-leetcode-interesting]]
 ** TODO How to scale knative pod instances
 ** #  --8<-------------------------- separator ------------------------>8-- :noexport:
 * TODO How knative deploy controller     :noexport:
@@ -288,7 +288,7 @@ https://github.com/knative/docs/tree/master/serving/samples
 https://github.com/knative/eventing/blob/master/config/500-controller.yaml
 https://github.com/knative/eventing/blob/master/config/500-controller-manager.yaml
 * TODO how knative do e2e tests
-https://github.com/knative/eventing/tree/master/test
+https://github.com/knative/eventing/tree/master/cheatsheet-knative-A4][challenges-leetcode-interesting]]
 * org-mode configuration                                           :noexport:
 #+STARTUP: overview customtime noalign logdone showall
 #+TITLE:  Kubernetes Knative
