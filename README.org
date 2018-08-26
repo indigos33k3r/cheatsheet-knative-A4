@@ -292,7 +292,6 @@ https://github.com/knative/eventing/blob/master/config/500-controller-manager.ya
 https://github.com/knative/eventing/tree/master/cheatsheet-knative-A4][challenges-leetcode-interesting]]
 * org-mode configuration                                           :noexport:
 #+STARTUP: overview customtime noalign logdone showall
-#+TITLE:  Kubernetes Knative
 #+DESCRIPTION: 
 #+KEYWORDS: 
 #+AUTHOR: Denny Zhang
